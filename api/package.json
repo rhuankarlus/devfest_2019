@@ -1,0 +1,19 @@
+{
+  "name": "devfest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "devfest.js",
+  "scripts": {
+    "start": "node devfest.js",
+    "test": "set NODE_ENV=test&& node devfest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-load": "^1.1.16",
+    "mongoose": "^5.5.14"
+  }
+}

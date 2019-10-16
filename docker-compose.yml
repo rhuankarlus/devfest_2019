@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  database:
+    image: mongo
+    ports:
+      - 27017:27017
+
+  api-container:
+    build: ./api
+    ports:
+      - 3005:3000
+    depends_on:
+      - database
+    links:
+      - database
+    environment:
+      - NODE_ENV=docker
+      - SERVER_PORT=3000
+      - MONGO_DB_URL=mongodb://database/devfest

@@ -7,7 +7,9 @@ services:
       - 27017:27017
 
   api-container:
-    build: ./api
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 3005:3000
     depends_on:

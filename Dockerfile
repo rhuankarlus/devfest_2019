@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
 WORKDIR /api
-COPY ./api /api/
+ADD /api /api/
 RUN npm install -qy
 EXPOSE 3000
 

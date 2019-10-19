@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs'),
+    ip = require('ip'),
     config = require('./config'),
     mongoose = require('mongoose'),
     cors = require('cors'),
@@ -18,7 +19,7 @@ load('models')
 
 function listen() {
     app.listen(config.server_port);
-    console.log(`The server is up and running at port ${config.server_port}`);
+    console.log(`The server is up and running at ${ip.address()}:${config.server_port}`);
 }
 
 function connectDatabase() {

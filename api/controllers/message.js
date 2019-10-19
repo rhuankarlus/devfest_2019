@@ -3,6 +3,7 @@
 module.exports = function (app) {
 
     const MessageModel = app.models.message;
+    const localIP = require('ip').address();
 
     const handleError = (err, res) => {
         res.status(500).json(err);
@@ -22,7 +23,7 @@ module.exports = function (app) {
                     return;
                 }
 
-                res.json(message);
+                res.json({ message, ip: localIP });
             });
         });
     }

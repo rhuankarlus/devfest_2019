@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-load": "^1.1.16",
     "ip": "^1.1.5",
     "mongoose": "^5.5.14"
